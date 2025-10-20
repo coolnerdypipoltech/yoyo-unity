@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e8ebc5f71f20a7e4697f3ab67912be7b
+guid: 6a7d7b0a933939e47b0a5b9c04ebd64e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1313515396176235027
-    second: Rabbit_icon_ON@3x_0
+      213: 3534270917658618091
+    second: Perks_icon_ON (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rabbit_icon_ON@3x_0
+      name: Perks_icon_ON (1)_0
       rect:
         serializedVersion: 2
         x: 7
         y: 9
-        width: 88
-        height: 83
+        width: 54
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de5b8ebd4b475cde0800000000000000
-      internalID: -1313515396176235027
+      spriteID: be8290b9ca04c0130800000000000000
+      internalID: 3534270917658618091
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rabbit_icon_ON@3x_0: -1313515396176235027
+      Perks_icon_ON (1)_0: 3534270917658618091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

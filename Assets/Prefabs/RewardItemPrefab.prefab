@@ -316,6 +316,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loader: {fileID: 7183996857584310485}
   image: {fileID: 733735840100553204}
+  video: {fileID: 0}
+  rawImage: {fileID: 0}
+  button: {fileID: 0}
+  videoObject: {fileID: 0}
+  rt: {fileID: 0}
 --- !u!1 &3788204290719906330
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,8 +489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -522,7 +527,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3, y: 2, z: 0, w: 0}
+  m_margin: {x: 3, y: 2, z: 3, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

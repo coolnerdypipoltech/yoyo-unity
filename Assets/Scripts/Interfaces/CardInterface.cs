@@ -33,7 +33,7 @@ public class CardInterface : MonoBehaviour
         
         if (isFullScreen)
         {
-            gameObject.transform.DOMove(restPosition.transform.position, 0.5f);
+            gameObject.transform.DOMove(restPosition.transform.position, 0.5f, false).SetEase(Ease.InQuad);
         }
 
         if (NewScreenManager.instance.GetCurrentView().GetComponent<PlacesViewModel>().GetCardValue())
@@ -78,14 +78,14 @@ public class CardInterface : MonoBehaviour
     {
         if (isFullScreen)
         {
-            gameObject.transform.DOMove(firstPosition.position, 0.5f);
+            gameObject.transform.DOMove(firstPosition.position, 0.5f).SetEase(Ease.InQuad);
         }
 
     }
 
     public void OnClickClose(GameObject _gameObject)
     {
-        gameObject.transform.DOMove(firstPosition.position, 0.5f).OnComplete(() =>
+        gameObject.transform.DOMove(firstPosition.position, 0.5f).SetEase(Ease.InQuad).OnComplete(() =>
         {
             _gameObject.SetActive(false);
         });

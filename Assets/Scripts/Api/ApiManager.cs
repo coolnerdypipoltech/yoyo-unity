@@ -25,8 +25,8 @@ public class ApiManager : MonoBehaviour
     public string accessToken = "";
     private User currentUser;
     private static string phoneNumber = "8331021023";
-    private static string BASE_API_URL = "http://64.227.105.243/api/v1";
-    private static string NEXT_URL = "http://64.227.105.243/api";
+    private static string BASE_API_URL = "https://admin.yoyotheclub.com/api/v1";
+    private static string NEXT_URL = "https://admin.yoyotheclub.com/api";
     private static string SIGNIN_ENDPOINT = BASE_API_URL + "/auth/signin";
     private static string LOGIN_ENDPOINT = BASE_API_URL + "/auth/login";
     private static string RESET_PASSWORD_ENDPOINT = BASE_API_URL + "/auth/passwords/reset";

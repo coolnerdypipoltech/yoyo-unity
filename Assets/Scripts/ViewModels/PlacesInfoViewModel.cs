@@ -134,8 +134,15 @@ public class PlacesInfoViewModel : ViewModel
             {
                 foreach (var genre in _place.music_genre_list)
                 {
+                    float width = 0;
                     GameObject tag = Instantiate(tagItemPrefab, TagsContainer.transform);
                     tag.GetComponentInChildren<TextMeshProUGUI>().text = genre.Trim();
+                    width = tag.GetComponentInChildren<TextMeshProUGUI>().preferredWidth + 20;
+                    tag.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 20);
+                    tag.GetComponentInChildren<Image>().gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 20);
+                    tag.GetComponentInChildren<ContentSizeFitter>().enabled = false;
+                    tag.GetComponentInChildren<TextMeshProUGUI>().gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 20);
+
                 }
                 LayoutRebuilder.ForceRebuildLayoutImmediate(TagsContainer.GetComponent<RectTransform>());
             }

@@ -75,19 +75,16 @@ public class LogInViewModel : ViewModel
                 LoginResponse loginResponse = JsonUtility.FromJson<LoginResponse>(responseText);
                 emailInput.text = "";
                 passwordInput.text = "";
-                Debug.Log(loginResponse);
 
             }
             else if (responseCode == 401)
             {
                 errorMessage.SetActive(true);
                 ErrorResponse errorResponse = JsonUtility.FromJson<ErrorResponse>(responseText);
-                Debug.LogError($"Login failed: {errorResponse.error_code}");
 
             }
             else
             {
-                Debug.LogError($"Login failed: {responseText}");
                 errorMessage.SetActive(true);
             }
             

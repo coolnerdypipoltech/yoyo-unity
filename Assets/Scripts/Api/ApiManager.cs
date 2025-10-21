@@ -83,7 +83,6 @@ public class ApiManager : MonoBehaviour
             if (responseCode == 200)
             {
                 UpdateUserResponse updateResponse = JsonUtility.FromJson<UpdateUserResponse>(responseText);
-                Debug.Log($"User updated successfully: {updateResponse.user.name}");
             }
         });
     }
@@ -188,7 +187,7 @@ public class ApiManager : MonoBehaviour
     public void GetMorePlaces(string nextUrl, Action<object[]> callback)
     {
         string endpoint = NEXT_URL + nextUrl;
-        Debug.Log(endpoint);
+
         StartCoroutine(MakeGetRequest(endpoint, callback, accessToken));
     }
 
@@ -201,7 +200,7 @@ public class ApiManager : MonoBehaviour
     public void GetMoreEvents(string nextUrl, Action<object[]> callback)
     {
         string endpoint = NEXT_URL + nextUrl;
-        Debug.Log(endpoint);
+
         StartCoroutine(MakeGetRequest(endpoint, callback, accessToken));
     }
 
@@ -214,7 +213,6 @@ public class ApiManager : MonoBehaviour
     public void GetMorePartners(string nextUrl, Action<object[]> callback)
     {
         string endpoint = NEXT_URL + nextUrl;
-        Debug.Log(endpoint);
         StartCoroutine(MakeGetRequest(endpoint, callback, accessToken));
     }
 
@@ -245,7 +243,6 @@ public class ApiManager : MonoBehaviour
 
             if (uwr.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError("Error loading image: " + uwr.error);
                 callback?.Invoke(null);
             }
             else
@@ -299,7 +296,6 @@ public class ApiManager : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error converting JSON to query params: {e.Message}");
             return "";
         }
     }
@@ -385,13 +381,11 @@ public class ApiManager : MonoBehaviour
         if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
         {
             string responseText = request.downloadHandler.text;
-            Debug.Log($"API Success - Code: {responseCode}, Response: {responseText}");
             callback(new object[] { responseCode, responseText });
         }
         else
         {
             string errorText = request.error;
-            Debug.LogError($"API Error - Code: {responseCode}, Error: {errorText}");
             callback(new object[] { responseCode, errorText });
         }
     }

@@ -99,7 +99,6 @@ public class PlacesViewModel : ViewModel
 
     private void GetMorePlaces()
     {
-        Debug.Log(placesResponse.next);
         if (placesResponse.next != null && placesResponse.next != "")
         {
             placesLoadingIcon.SetActive(true);
@@ -122,7 +121,6 @@ public class PlacesViewModel : ViewModel
                 {
                     placesLoadingIcon.SetActive(false);
                     gettingMorePlaces = false;
-                    Debug.LogError($"GetPlaces failed: {responseText}");
                 }
             });
         }
@@ -140,10 +138,6 @@ public class PlacesViewModel : ViewModel
                 placesResponse = JsonUtility.FromJson<PlacesResponse>(responseText);
 
                 GetPlacesCallback(placesResponse.results.ToArray());
-            }
-            else
-            {
-                Debug.LogError($"GetRewards failed: {responseText}");
             }
             
         });
@@ -180,10 +174,7 @@ public class PlacesViewModel : ViewModel
 
                 GetEventsCallback(eventsResponse.results.ToArray());
             }
-            else
-            {
-                Debug.LogError($"GetPlaces failed: {responseText}");
-            }
+
             
         });
     }
@@ -230,7 +221,6 @@ public class PlacesViewModel : ViewModel
                 {
                     eventsLoadingIcon.SetActive(false);
                     gettingMoreEvents = false;
-                    Debug.LogError($"GetEvents failed: {responseText}");
                 }
             });
         }

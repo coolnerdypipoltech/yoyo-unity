@@ -192,7 +192,6 @@ public class RewardsViewModel : ViewModel
 
     private void GetMoreRewards()
     {
-        Debug.Log(rewardsResponse.next);
         if (rewardsResponse.next != null && rewardsResponse.next != "")
         {
             rewardsLoadingIcon.SetActive(true);
@@ -214,7 +213,6 @@ public class RewardsViewModel : ViewModel
                 {
                     rewardsLoadingIcon.SetActive(false);
                     gettingMoreRewards = false;
-                    Debug.LogError($"GetPlaces failed: {responseText}");
                 }
             });
         }
@@ -234,10 +232,7 @@ public class RewardsViewModel : ViewModel
 
                 GetRewardsCallback(rewardsResponse.results.ToArray());
             }
-            else
-            {
-                Debug.LogError($"GetRewards failed: {responseText}");
-            }
+
 
         });
     }
@@ -272,10 +267,7 @@ public class RewardsViewModel : ViewModel
 
                 GetPartnersCallback(partnersResponse.results.ToArray());
             }
-            else
-            {
-                Debug.LogError($"GetPlaces failed: {responseText}");
-            }
+
 
         });
     }
@@ -321,7 +313,6 @@ public class RewardsViewModel : ViewModel
                 {
                     partnersLoadingIcon.SetActive(false);
                     gettingMorePartners = false;
-                    Debug.LogError($"GetEvents failed: {responseText}");
                 }
             });
         }

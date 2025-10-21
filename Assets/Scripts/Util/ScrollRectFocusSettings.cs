@@ -22,7 +22,6 @@ public class ScrollRectFocusSettings : MonoBehaviour
         Vector3 middleOfTheScreenWorldPosition = new Vector2(Screen.width / 2, Screen.height / 2);
 
         float middlePointLength = Vector2.Distance(middleOfTheScreenWorldPosition, m_scrollTopReference.position);
-            Debug.Log("childLength: " + childLength + " middlePointLength: " + middlePointLength);
 
         if (childLength > middlePointLength)
         {

@@ -12,9 +12,6 @@ public static class ScrollExtensions
             0,
             0 - (viewportLocalPosition.y + childLocalPosition.y)
         );
-        Debug.Log(viewportLocalPosition.y);
-        Debug.Log(childLocalPosition.y);
-        Debug.Log(result);
         return result;
     }
 }

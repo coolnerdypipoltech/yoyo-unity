@@ -57,7 +57,6 @@ public class RewardsInfoViewModel : ViewModel
             string formattedEnd = $"{endDate.Day} {months[endDate.Month - 1]} {endDate.Year}";
             return $"{formattedStart} - {formattedEnd}";
         }
-        Debug.Log(start + " - " + end);
         return start + " - " + end;
     }
 

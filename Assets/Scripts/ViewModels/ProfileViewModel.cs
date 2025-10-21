@@ -93,7 +93,6 @@ public class ProfileViewModel : ViewModel
                 texture = MakeTextureReadable(texture);
                 if (texture == null)
                 {
-                    Debug.Log("Couldn't load texture from " + path);
                     return;
                 }
 
@@ -153,7 +152,6 @@ public class ProfileViewModel : ViewModel
     {
         if (sprite == null)
         {
-            Debug.LogError("Sprite nulo");
             return null;
         }
         Texture2D texture = sprite.texture;

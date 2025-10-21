@@ -47,10 +47,8 @@ public class PhoneSelectorHandler : MonoBehaviour
             if (startIndex != -1 && endIndex != -1)
             {
                 string countryCodeFromOption = optionText.Substring(startIndex + 1, endIndex - startIndex - 1);
-                Debug.Log("country: " + countryCodeFromOption + " search: " + searchText);
                 if (countryCodeFromOption.Equals(searchText))
                 {
-                    Debug.Log("Found match: " + optionText);
                     countryDropdown.value = i;
                     string[] stringParse = countryValue.text.Split('(');
                     countryCode = stringParse[1].Replace(")", "").Trim();

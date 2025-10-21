@@ -95,7 +95,6 @@ public class CardInterface : MonoBehaviour
 
     public void OnClickAddPoints()
     {
-        Debug.Log("Add Points Clicked" + FirstAnimationDone);
         if (!FirstAnimationDone)
         {
             return;
@@ -145,13 +144,11 @@ public class CardInterface : MonoBehaviour
 
         if (!FirstAnimationDone)
         {
-            Debug.Log("1");
             PlayAnimationFirst();
             NewScreenManager.instance.GetCurrentView().GetComponent<PlacesViewModel>().SetCardValue(true);
         }
         else
         {
-            Debug.Log("2");
             PlayAnimationSecond();
             NewScreenManager.instance.GetCurrentView().GetComponent<PlacesViewModel>().SetCardValue(false);
         }

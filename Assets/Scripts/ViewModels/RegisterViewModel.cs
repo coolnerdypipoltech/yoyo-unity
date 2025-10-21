@@ -51,7 +51,6 @@ public class RegisterViewModel : ViewModel
 
     public void SetCode(string code)
     {
-        Debug.Log("SetCode: " + code);
         accessCodeInput.text = code;
     }
 
@@ -268,7 +267,6 @@ public class RegisterViewModel : ViewModel
         {
             long responseCode = (long)response[0];
             string responseText = response[1].ToString();
-            Debug.Log(responseText);
             if (responseCode == 200)
             {
                 NewScreenManager.instance.ChangeToMainView(ViewID.LogInViewModel, true);

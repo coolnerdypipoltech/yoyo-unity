@@ -22,7 +22,7 @@ public class ProfileViewModel : ViewModel
             nameValueText.text = currentUser.name;
             phoneValueText.text = currentUser.related.phone;
             emailValueText.text = currentUser.email;
-            idValueText.text = "ID: " + currentUser.id.ToString();
+            idValueText.text = "ID: " + ApiManager.instance.GetUserId().ToString();
             drinkValueText.text = currentUser.related.taste_drink;
             foodValueText.text = currentUser.related.taste_food;
             musicValueText.text = currentUser.related.taste_music;

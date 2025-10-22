@@ -54,6 +54,10 @@ public class RewardsViewModel : ViewModel
         {
             GameObject.Destroy(child.gameObject);
         }
+        foreach (Transform child in paginationToggleGroup.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         scrollSnapContainer.SetActive(false);
     }
 

@@ -4,7 +4,7 @@ using System;
 public class PlacesViewModel : ViewModel
 {
     public GameObject cardPopUpContainer;
-    public GameObject placeItemPrefab, placesContainer, noPlacesText, placesLoadingIcon;
+    public GameObject placeItemPrefab, placesContainer, noPlacesText, placesLoadingIcon, paddingRightPlaces, paddingLeftPlaces, paddingRightEvents, paddingLeftEvents;
 
     public GameObject  eventsContainer, noEventsText, eventsLoadingIcon;
 
@@ -76,8 +76,9 @@ public class PlacesViewModel : ViewModel
             {
                 GameObject.Destroy(child.gameObject);
             }
-            
+
         }
+        
         noPlacesText.SetActive(false);
         placesLoadingIcon.SetActive(true);
         GetPlaces();
@@ -156,7 +157,10 @@ public class PlacesViewModel : ViewModel
             GameObject placeItem = Instantiate(placeItemPrefab, placesContainer.transform);
             placeItem.GetComponent<PlaceInterface>().SetPlace(item, true);
         }
+        paddingLeftPlaces.transform.SetAsFirstSibling();
         placesLoadingIcon.transform.SetAsLastSibling();
+        paddingRightPlaces.transform.SetAsLastSibling();
+        
         gettingMorePlaces = false;
         placesLoadingIcon.SetActive(false);
     }
@@ -193,7 +197,10 @@ public class PlacesViewModel : ViewModel
             GameObject Item = Instantiate(placeItemPrefab, eventsContainer.transform);
             Item.GetComponent<PlaceInterface>().SetPlace(item, false);
         }
+        paddingLeftEvents.transform.SetAsFirstSibling();
         eventsLoadingIcon.transform.SetAsLastSibling();
+        paddingRightEvents.transform.SetAsLastSibling();
+        
         gettingMoreEvents = false;
         eventsLoadingIcon.SetActive(false);
     }

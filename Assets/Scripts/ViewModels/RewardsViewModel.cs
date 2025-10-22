@@ -8,7 +8,7 @@ public class RewardsViewModel : ViewModel
 {
     public TextMeshProUGUI pointsText;
 
-    public GameObject ItemPrefab, rewardsContainer, noRewardsIcon, rewardsLoadingIcon;
+    public GameObject ItemPrefab, rewardsContainer, noRewardsIcon, rewardsLoadingIcon , paddingRightPerks, paddingLeftPerks, paddingRightPartners, paddingLeftPartners; 
 
     public GameObject partnersContainer, noPartnersText, partnersLoadingIcon;
     public GameObject scrollSnapContainer, ImageGalleryContainer, ImageGalleryItemPrefab, parentContainer, pointsContainer, togglePrefab;
@@ -253,7 +253,10 @@ public class RewardsViewModel : ViewModel
             GameObject placeItem = Instantiate(ItemPrefab, rewardsContainer.transform);
             placeItem.GetComponent<RewardInterface>().SetPlace(item, true);
         }
+        paddingLeftPerks.transform.SetAsFirstSibling();
         rewardsLoadingIcon.transform.SetAsLastSibling();
+        paddingRightPerks.transform.SetAsLastSibling();
+        
         gettingMoreRewards = false;
         rewardsLoadingIcon.SetActive(false);
     }
@@ -289,7 +292,10 @@ public class RewardsViewModel : ViewModel
             GameObject Item = Instantiate(ItemPrefab, partnersContainer.transform);
             Item.GetComponent<RewardInterface>().SetPlace(item, false);
         }
+        paddingLeftPartners.transform.SetAsFirstSibling();
         partnersLoadingIcon.transform.SetAsLastSibling();
+        paddingRightPartners.transform.SetAsLastSibling();
+        
         gettingMorePartners = false;
         partnersLoadingIcon.SetActive(false);
     }

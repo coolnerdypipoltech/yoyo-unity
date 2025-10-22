@@ -125,30 +125,37 @@ public class RegisterViewModel : ViewModel
         if (errorText.Contains("email"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Invalid email format.";
+            return;
         }
         if (errorText.Contains("code"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Invalid code";
+            return;
         }
         else if (errorText.Contains("age"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Age must be greater than 18.";
+            return;
         }
         else if (errorText.Contains("password"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Password must be at least 8 characters long and include uppercase, lowercase, digit, and special character.";
+            return;
         }
         else if (errorText.Contains("terms"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Please accept the terms and conditions.";
+            return;
         }
         else if (errorText.Contains("matchKeys"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "Passwords do not match.";
+            return;
         }
         else if (errorText.Contains("api.error.already_exists"))
         {
             errorMessage.GetComponentInChildren<TextMeshProUGUI>().text = "An account with this email already exists.";
+            return;
         }
         else
         {
@@ -276,7 +283,7 @@ public class RegisterViewModel : ViewModel
 
             else if (responseCode == 401)
             {
-                ProcessErrorText(responseText);
+                ProcessErrorText("api.error.already_exists");
             }
             else if (responseCode == 400)
             {

@@ -75,8 +75,7 @@ public class RewardsViewModel : ViewModel
         OnClickReloadPartners();
         HideAds();
         GetAds();
-        ApiManager.instance.UpdateUsersPoints((object[] response) =>
-        {
+        ApiManager.instance.GetInfoFromToken((object[] response) => {
             User user = ApiManager.instance.GetUser();
 
             if (user != null)
@@ -84,9 +83,8 @@ public class RewardsViewModel : ViewModel
                 pointsText.text = $"Available Points: {user.related.points}";
             }
             StartCoroutine(WaitAFrame());
-
+            
         });
-
     }
 
 
@@ -97,7 +95,7 @@ public class RewardsViewModel : ViewModel
         ApiManager.instance.GetAdvertisements((object[] response) =>
         {
             SimpleScrollSnap scrollSnap = scrollSnapContainer.AddComponent<SimpleScrollSnap>();
-            
+            scrollSnap.AutomaticLayoutSpacing = 0f;
             long responseCode = (long)response[0];
             string responseText = response[1].ToString();
             if (responseCode == 200)

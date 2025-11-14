@@ -23,6 +23,7 @@ public class ApiManager : MonoBehaviour
     }
 
     public string accessToken = "";
+    public string userEmail = "";
     private User currentUser;
     private static string phoneNumber = "8331021023";
     private static string BASE_API_URL = "https://admin.yoyotheclub.com/api/v1";
@@ -40,11 +41,60 @@ public class ApiManager : MonoBehaviour
     private static string GET_ADVERTISEMENTS_ENDPOINT = BASE_API_URL + "/advertisements";
     private static string UPDATE_POINTS_ENDPOINT = BASE_API_URL + "/auth/points";
     private static string UPLOAD_IMAGE_ENDPOINT = BASE_API_URL + "/auth/image";
+    private static string GET_INFO_FROM_TOKEN_ENDPOINT = BASE_API_URL + "/auth/info";
 
+    // PlayerPrefs keys for local persistence
+    private const string PREFS_ACCESS_TOKEN = "yoyo_access_token";
+
+    public void Awake()
+    {
+        accessToken = LoadAccessToken();
+        if (!string.IsNullOrEmpty(accessToken))
+        {
+            NewScreenManager.instance.ShowLoadingScreen(true);
+            GetInfoFromToken((object[] response) =>
+            {
+                long responseCode = (long)response[0];
+                string responseText = response[1].ToString();
+                NewScreenManager.instance.ShowLoadingScreen(false);
+                if (responseCode == 200)
+                {
+                    NewScreenManager.instance.ChangeToMainView(ViewID.PlacesViewModel, false);
+                    LoginResponse loginResponse = JsonUtility.FromJson<LoginResponse>(responseText);
+                }
+                else
+                {
+                    // Token invalid/expired; clear locally so we don't loop
+                    ClearAccessToken();
+                    accessToken = "";
+                }
+            });
+        }
+    }
     
+    public void ClearToken()
+    {
+        ClearAccessToken();
+        accessToken = "";
+    }
+
+
+
+
+
     public User GetUser()
     {
         return currentUser;
+    }
+
+    public void SetUserEmail(string email)
+    {
+        userEmail = email;
+    }
+
+    public string GetUserEmail()
+    {
+        return userEmail;
     }
 
     public string GetUserId()
@@ -96,8 +146,25 @@ public class ApiManager : MonoBehaviour
 
     public void SignIn(SignInRequest signInData, Action<object[]> callback)
     {
+        //SetUserEmail(signInData.email);
         string jsonData = JsonUtility.ToJson(signInData);
         StartCoroutine(MakePostRequest(SIGNIN_ENDPOINT, jsonData, callback, false));
+    }
+
+    public void GetInfoFromToken(Action<object[]> callback)
+    {
+        StartCoroutine(MakeGetRequest(GET_INFO_FROM_TOKEN_ENDPOINT, (response) =>
+        {
+            long responseCode = (long)response[0];
+            string responseText = response[1].ToString();
+
+            if (responseCode == 200)
+            {
+                UserInfo infoResponse = JsonUtility.FromJson<UserInfo>(responseText);
+                currentUser = infoResponse.user;
+            }
+            callback(response);
+        }, accessToken));
     }
 
     public int GetUsersPoints()
@@ -137,6 +204,7 @@ public class ApiManager : MonoBehaviour
                 LoginResponse loginResponse = JsonUtility.FromJson<LoginResponse>(responseText);
                 accessToken = loginResponse.access_token;
                 currentUser = loginResponse.user;
+                SaveAccessToken(accessToken);
             }
             callback(response);
         }, false));
@@ -294,7 +362,7 @@ public class ApiManager : MonoBehaviour
 
             return string.Join("&", queryParams);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return "";
         }
@@ -387,6 +455,28 @@ public class ApiManager : MonoBehaviour
         {
             string errorText = request.error;
             callback(new object[] { responseCode, errorText });
+        }
+    }
+
+    // Local persistence helpers (PlayerPrefs works on iOS/Android)
+    private void SaveAccessToken(string token)
+    {
+        if (string.IsNullOrEmpty(token)) return;
+        PlayerPrefs.SetString(PREFS_ACCESS_TOKEN, token);
+        PlayerPrefs.Save();
+    }
+
+    private string LoadAccessToken()
+    {
+        return PlayerPrefs.GetString(PREFS_ACCESS_TOKEN, "");
+    }
+
+    public void ClearAccessToken()
+    {
+        if (PlayerPrefs.HasKey(PREFS_ACCESS_TOKEN))
+        {
+            PlayerPrefs.DeleteKey(PREFS_ACCESS_TOKEN);
+            PlayerPrefs.Save();
         }
     }
 

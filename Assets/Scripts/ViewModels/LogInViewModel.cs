@@ -8,13 +8,22 @@ public class LogInViewModel : ViewModel
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void OnEnable()
+    {
+        string savedEmail = ApiManager.instance.GetUserEmail();
+        if (!string.IsNullOrEmpty(savedEmail))
+        {
+            emailInput.text = savedEmail;
+        }
     }
 
     void OnDisable()
@@ -75,12 +84,6 @@ public class LogInViewModel : ViewModel
                 LoginResponse loginResponse = JsonUtility.FromJson<LoginResponse>(responseText);
                 emailInput.text = "";
                 passwordInput.text = "";
-
-            }
-            else if (responseCode == 401)
-            {
-                errorMessage.SetActive(true);
-                ErrorResponse errorResponse = JsonUtility.FromJson<ErrorResponse>(responseText);
 
             }
             else

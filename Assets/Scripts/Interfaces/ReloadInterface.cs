@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
@@ -7,12 +9,8 @@ public class ReloadInterface : MonoBehaviour
     private const float BASE_TOP = -25f;
     private const float BASE_BOTTOM = 0f;
 
-    [Header("Labels")]
-    private string topPullLabel = "SCROLL DOWN FOR UPDATE...";
-    private string topReleaseLabel = "RELEASE TO UPDATE LIST...";
-    private string bottomPullLabel = "SCROLL UP FOR UPDATE...";
-    private string bottomReleaseLabel = "RELEASE TO UPDATE LIST...";
-
+    public List<Sprite> topLabels;
+    public Image topLabelImage;
     private bool _canLoad = false;
     private bool _isLoading = false;
     private bool _visualsSetAtTheStart = false;
@@ -22,8 +20,6 @@ public class ReloadInterface : MonoBehaviour
 
     [Header("Visuals")]
     public bool visualsActive = true;
-    public GameObject reloadEventObject;
-    public TextMeshProUGUI reloadEventsText;
     public RectTransform Scroll;
 
     [Header("Pull coefficient")]
@@ -58,8 +54,14 @@ public class ReloadInterface : MonoBehaviour
             _visualsSetAtTheStart = true;
         }
 
+        if (_vector < -20 && _vector >-50)
+        {
+            topLabelImage.sprite = topLabels[1];
+        }
+
         if (_vector < (BASE_TOP + loadMoreObjectsLimiter))
         {
+
             if (!_isLoading)
             {
                 PrepareReload();
@@ -78,6 +80,7 @@ public class ReloadInterface : MonoBehaviour
 
         if ((_vector > BASE_TOP + limiterToStartReload) && _canLoad)
         {
+            topLabelImage.sprite = topLabels[2];
             Reload();
         }
     }
@@ -88,6 +91,13 @@ public class ReloadInterface : MonoBehaviour
         {
             SetVisualsAtStartScroll();
             _visualsSetAtTheStart = true;
+        }
+
+        Debug.Log(_vector + " " + (BASE_BOTTOM - loadMoreObjectsLimiter));
+
+        if (_vector < (BASE_BOTTOM - loadMoreObjectsLimiter)/2)
+        {
+            topLabelImage.sprite = topLabels[1];
         }
 
         if (_vector < (BASE_BOTTOM - loadMoreObjectsLimiter))
@@ -116,29 +126,25 @@ public class ReloadInterface : MonoBehaviour
 
     public void SetVisualsBeforeStartScroll()
     {
-        if (visualsActive && reloadEventsText != null)
+        if (visualsActive && topLabelImage != null)
         {
-            reloadEventsText.gameObject.SetActive(false);
-            reloadEventsText.text = isTopLoader ? topPullLabel : bottomPullLabel;
+            topLabelImage.gameObject.SetActive(false);
+            topLabelImage.sprite = topLabels[0];
         }
-        if (visualsActive && reloadEventObject != null) reloadEventObject.SetActive(false);
     }
 
     private void SetVisualsAtStartScroll()
     {
-        if (visualsActive && reloadEventsText != null)
+        if (visualsActive && topLabelImage != null)
         {
-            reloadEventsText.gameObject.SetActive(true);
-            reloadEventsText.text = isTopLoader ? topPullLabel : bottomPullLabel;
+            topLabelImage.gameObject.SetActive(true);
+            topLabelImage.sprite = topLabels[0];
         }
-
-        if (visualsActive && reloadEventObject != null) reloadEventObject.SetActive(true);
     }
 
     private void PrepareReload()
     {
-        if (visualsActive && reloadEventsText != null) reloadEventsText.text = isTopLoader ? topReleaseLabel : bottomReleaseLabel;
-
+        topLabelImage.sprite = topLabels[2];
         _canLoad = true;
         _isLoading = true;
     }

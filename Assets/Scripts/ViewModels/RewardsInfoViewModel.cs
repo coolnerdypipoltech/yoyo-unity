@@ -89,6 +89,7 @@ public class RewardsInfoViewModel : ViewModel
         isFromRewards = _isFromRewards;
 
         SimpleScrollSnap scrollSnap = scrollSnapContainer.AddComponent<SimpleScrollSnap>();
+        scrollSnap.AutomaticLayoutSpacing = 0f;
         if(_reward.gallery != null && _reward.gallery.Length > 1)
         {
             scrollSnap.Pagination = paginationToggleGroup;
@@ -111,8 +112,10 @@ public class RewardsInfoViewModel : ViewModel
                 }
                 else
                 {
+                    imageItem.GetComponent<ImageInterface>().takeOutMask();
                     ApiManager.instance.SetImageFromUrl(media.absolute_url, (Sprite response) =>
                     {
+                        
                         imageItem.GetComponent<ImageInterface>().setImage(response);
                     });
                 }
@@ -127,8 +130,10 @@ public class RewardsInfoViewModel : ViewModel
             else
             {
                 GameObject imageItem = Instantiate(ImageGalleryItemPrefab, ImageGalleryContainer.transform);
+                imageItem.GetComponent<ImageInterface>().takeOutMask();
                 ApiManager.instance.SetImageFromUrl(_reward.media[0].absolute_url, (Sprite response) =>
                 {
+                    
                     imageItem.GetComponent<ImageInterface>().setImage(response);
                 });
             }

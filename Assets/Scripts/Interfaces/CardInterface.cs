@@ -59,14 +59,18 @@ public class CardInterface : MonoBehaviour
         {
             nameText.text = user.name;
             idText.text = FormatId(user.id);
-            pointsText.text = $"{user.related.points} POINTS";
-            totalPointsText.text = $"{user.related.total_points} POINTS";
+            pointsText.text = $"{user.related.points} points";
+            totalPointsText.text = $"{user.related.total_points} points";
         }
     }
 
     public void SetIsDragging(bool value)
     {
         isDragging = value;
+        if (!isDragging)
+        {
+            StartCoroutine(WaitAndReset());
+        }
     }
 
     public string FormatId(int id)
@@ -124,10 +128,7 @@ public class CardInterface : MonoBehaviour
         
 
 
-        if (Math.Abs(value.y) > Math.Abs(value.x))
-        {
-            return;
-        }
+
 
         if (isFullScreen)
         {
@@ -157,7 +158,7 @@ public class CardInterface : MonoBehaviour
 
     private IEnumerator WaitAndReset()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         contentValue.transform.position = contentValueRestPosition.position;
             isAnimating = false;
     }

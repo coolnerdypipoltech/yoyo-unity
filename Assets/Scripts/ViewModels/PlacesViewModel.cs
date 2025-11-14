@@ -59,13 +59,12 @@ public class PlacesViewModel : ViewModel
     {
         ReloadPlaces();
         ReloadEvents();
-        ApiManager.instance.UpdateUsersPoints((object[] response) =>
-        {
-
+        ApiManager.instance.GetInfoFromToken((object[] response) => {
             cardInterface1.UpdateUsersPoints();
             cardInterface2.UpdateUsersPoints();
             
         });
+
     }
 
     public void ReloadPlaces()

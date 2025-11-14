@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class NewScreenManager : Manager
 {
     private const int MIN_BACK_STACK_COUNT = 1;
@@ -60,7 +61,15 @@ public class NewScreenManager : Manager
 
     public void ShowLoadingScreen(bool _value)
     {
-        loadingScreen.SetActive(_value);
+        if (_value)
+        {
+            loadingScreen.SetActive(true);
+        }
+        else
+        {
+            loadingScreen.GetComponentInChildren<BunnyInterface>().StopNextCycle();
+        }
+        
     }
 
     public void BackToPreviousView()
@@ -131,6 +140,7 @@ public class NewScreenManager : Manager
                 break;
             default:
                 videoInterface.SetClip(0);
+                videoInterface.CustomAlpha(0.2f);
                 break;
         }
         videoInterface.videoPlayer.Play();

@@ -129,13 +129,13 @@ TextureImporter:
       name: tooltip@3x_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 22
+        x: 10
+        y: 21
         width: 571
         height: 228
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 103, y: 52, z: 121, w: 48}
       customData: 
       outline: []
       physicsShape: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6134017b0a300f24482158f7f981cb7e
     internalID: 0
     vertices: []
     indices: 

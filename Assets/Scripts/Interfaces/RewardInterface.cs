@@ -20,9 +20,12 @@ public class RewardInterface : MonoBehaviour
         result = _result;
         if (_result.media != null && _result.media.Length != 0)
         {
+            placeImage.takeOutMask();
             ApiManager.instance.SetImageFromUrl(_result.media[0].absolute_url, (Sprite response) =>
             {
+                
                 placeImage.setImage(response);
+                placeImage.image.preserveAspect = false;
             });
         }
     }

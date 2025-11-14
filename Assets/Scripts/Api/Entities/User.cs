@@ -55,6 +55,12 @@ public class SignInRequest
 }
 
 [Serializable]
+public class UserInfo
+{
+    public User user;
+}
+
+[Serializable]
 public class LoginRequest
 {
     public string email;

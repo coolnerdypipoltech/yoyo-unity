@@ -3,18 +3,16 @@ using TMPro;
 using UnityEngine.UI;
 public class EditProfileViewModel : ViewModel
 {
-    public TMP_InputField nameInputText, phoneInputText;
+    public TMP_InputField phoneInputText;
     private User currentUser;
     public TextMeshProUGUI countryValueText;
     public PhoneSelectorHandler phoneSelectorHandler;
-    public GameObject clearNameButton, clearPhoneButton;
+    public GameObject clearPhoneButton;
 
     public Button SaveButton;
     public void OnSetup(User _currentUser)
     {
         currentUser = _currentUser;
-        nameInputText.text = currentUser.name;
-
         if (currentUser.related.phone.Length > 0)
         {
             phoneInputText.text = currentUser.related.phone.Split(' ')[1];
@@ -24,18 +22,9 @@ public class EditProfileViewModel : ViewModel
 
     void OnDisable()
     {
-        nameInputText.text = "";
         phoneInputText.text = "";
-        clearNameButton.SetActive(true);
         clearPhoneButton.SetActive(true);
         SaveButton.interactable = true;
-    }
-
-    public void ClearNameInput()
-    {
-        nameInputText.text = "";
-        clearNameButton.SetActive(false);
-        SaveButton.interactable = false;
     }
 
     public void ClearPhoneInput()
@@ -45,22 +34,10 @@ public class EditProfileViewModel : ViewModel
         SaveButton.interactable = false;
     }
 
-    public void OnChangeNameInput()
-    {
-        if (nameInputText.text.Length > 0)
-        {
-            clearNameButton.SetActive(true);
-            UpdateButton();
-        }
-        else
-        {
-            clearNameButton.SetActive(false);
-        }
-    }
 
     private void UpdateButton()
     {
-        if (nameInputText.text.Length > 0 || phoneInputText.text.Length > 9)
+        if (phoneInputText.text.Length > 9)
         {
             SaveButton.interactable = true;
         }
@@ -86,14 +63,6 @@ public class EditProfileViewModel : ViewModel
     public void SaveNewProfileInfo()
     {
 
-        if (nameInputText.text != "")
-        {
-            currentUser.name = nameInputText.text;
-        }
-        else
-        {
-            return;
-        }
         if (phoneInputText.text != "")
         {
             currentUser.related.phone = $"{countryValueText.text} {phoneInputText.text}";

@@ -6,7 +6,7 @@ public class ProfileViewModel : ViewModel
 {
     public User currentUser;
     public TextMeshProUGUI nameValueText, phoneValueText, emailValueText, idValueText, drinkValueText, foodValueText, musicValueText, pointsValueText;
-    public GameObject profileDefault;
+    public GameObject profileDefault, shimmerObject;
     public Image avatarImage;
 
     void OnEnable()
@@ -33,14 +33,17 @@ public class ProfileViewModel : ViewModel
                 {
                     avatarImage.gameObject.SetActive(true);
                     profileDefault.SetActive(false);
+                    shimmerObject.SetActive(true);
                     ApiManager.instance.SetImageFromUrl(currentUser.related.image.absolute_url, (Sprite response) =>
                     {
+                        shimmerObject.SetActive(false);
                         avatarImage.sprite = response;
                     });
                 }
                 else
                 {
                     profileDefault.SetActive(true);
+                    shimmerObject.SetActive(false);
                     avatarImage.gameObject.SetActive(false);
                 }
 
@@ -48,6 +51,7 @@ public class ProfileViewModel : ViewModel
             else
             {
                 profileDefault.SetActive(true);
+                shimmerObject.SetActive(false);
                 avatarImage.gameObject.SetActive(false);
             }
         }
@@ -75,6 +79,7 @@ public class ProfileViewModel : ViewModel
                     ApiManager.instance.UpdateImageLocally(imageResponse.image);
                     avatarImage.gameObject.SetActive(false);
                     profileDefault.SetActive(true);
+                    shimmerObject.SetActive(false);
                 }
                 NewScreenManager.instance.ShowLoadingScreen(false);
             });
@@ -96,7 +101,11 @@ public class ProfileViewModel : ViewModel
                     return;
                 }
 
-                avatarImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                //avatarImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                Sprite newAvatarSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                NewScreenManager.instance.ChangeToMainView(ViewID.CropProfileImgViewModel, true);
+                NewScreenManager.instance.GetMainView(ViewID.CropProfileImgViewModel).Initialize(new object[] { newAvatarSprite });
+                /*
                 string base64Image = System.Convert.ToBase64String(SpriteToByteArray(avatarImage.sprite));
                 UploadImageRequest uploadData = new UploadImageRequest();
                 uploadData.image = "data:image/png;base64," + base64Image;
@@ -117,9 +126,7 @@ public class ProfileViewModel : ViewModel
                             avatarImage.gameObject.SetActive(false);
                         }
                         NewScreenManager.instance.ShowLoadingScreen(false);
-                    });
-
-                
+                    });*/
             }
         } , "Select a picture", "image/*");
     }

@@ -20,9 +20,12 @@ public class PlaceInterface : MonoBehaviour
         place = _place;
         if (_place.media != null && _place.media.Count != 0)
         {
+            placeImage.takeOutMask();
             ApiManager.instance.SetImageFromUrl(_place.media[0].absolute_url, (Sprite response) =>
             {
+                
                 placeImage.setImage(response);
+                placeImage.image.preserveAspect = false;
             });
         }
         isFromPlaces = _isFromPlaces;

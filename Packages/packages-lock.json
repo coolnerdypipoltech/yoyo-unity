@@ -292,6 +292,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.yasirkula.imagecropper": {
+      "version": "https://github.com/yasirkula/UnityImageCropper.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fc76b1c0458b29efc8b96cd6681419c50cb6792a"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

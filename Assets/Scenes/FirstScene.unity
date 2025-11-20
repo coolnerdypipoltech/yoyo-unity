@@ -481,8 +481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -115.50156}
-  m_SizeDelta: {x: 247.15997, y: 2.6907}
+  m_AnchoredPosition: {x: 138.66092, y: -115.50156}
+  m_SizeDelta: {x: 247.32184, y: 2.6907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &19008700
 GameObject:
@@ -1710,9 +1710,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "What happens if I lose my password? Whisper to us, we\u2019ll help you
-    find your\r\nway back. Just use the \u201CForgot my password\u201D option to
-    reset securely through\r\nyour registered email."
+  m_text: "All your data and YoYo Credits will be permanently removed.\r\nIf you
+    choose to return later, you\u2019ll need a new invitation code to re-enter.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -2027,8 +2026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -509.87347}
-  m_SizeDelta: {x: 277.15997, y: 511.01215}
+  m_AnchoredPosition: {x: 138.66092, y: -509.87347}
+  m_SizeDelta: {x: 277.32184, y: 511.01215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65027476
 MonoBehaviour:
@@ -4122,7 +4121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reap what you drink
+  m_text: Enter the Hidden Loop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -6853,8 +6852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -39.661747}
-  m_SizeDelta: {x: 249.32184, y: 21.774498}
+  m_AnchoredPosition: {x: 138.66092, y: -43.774498}
+  m_SizeDelta: {x: 249.3218, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211453878
 MonoBehaviour:
@@ -8238,9 +8237,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Why the rabbit? He\u2019s not a mascot. He\u2019s a guide. Follow wisely.
-    The rabbit\r\nsymbolizes curiosity and discovery. The idea that every night can
-    lead\r\nsomewhere unexpected if you know where to look."
+  m_text: "Open the Rewards Vault, choose your perk, and tap Redeem.\r\nWe\u2019ll
+    guide you through the next steps directly on WhatsApp.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -8446,7 +8444,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 124.66092, y: 0}
-  m_SizeDelta: {x: 249.32184, y: 21.7745}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &248794919
 MonoBehaviour:
@@ -10108,7 +10106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49371f940bb462549a1ae88150296abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextToShow: The points you've earned since day one
+  TextToShow: Manage your account details, privacy settings, and exclusive-level
+    status.
   textLocation: {fileID: 1861989778}
   textBubblePrefab: {fileID: 5465242548949466113, guid: e603d999dff125e438f6ccb75bb5459b, type: 3}
   textBubbleContainer: {fileID: 1166510262}
@@ -10267,9 +10266,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Do I need an invitation? Not always. But it helps if you know the right
-    people.\r\nYOYO is open to everyone, but early access to certain perks and venues
-    may\r\nrequire exclusive invites.\r"
+  m_text: 'During our MVP phase, receipts help us manually verify your visit and
+    assign YoYo Credits accurately.
+
+    This ensures every credit you earn is real.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -10418,8 +10420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -70.76775}
-  m_SizeDelta: {x: 247.15997, y: 14.7769}
+  m_AnchoredPosition: {x: 138.66092, y: -70.76775}
+  m_SizeDelta: {x: 247.32184, y: 14.7769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313927045
 MonoBehaviour:
@@ -11345,8 +11347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -269.85776}
-  m_SizeDelta: {x: 249.32184, y: 21.774498}
+  m_AnchoredPosition: {x: 138.66092, y: -298.647}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342794236
 MonoBehaviour:
@@ -12112,9 +12114,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "What can I unlock with my points? Privileges, invitations, and a few things
-    we\r\ndon\u2019t print on menus. Redeem your points for access to private events,
-    VIP\r\ntables, signature cocktails, and limited-edition rewards."
+  m_text: 'Make reservations through the app, visit partner venues, and submit your
+    receipt via WhatsApp using Add Points on the back of your card.
+
+    Every experience
+    returns something back to you.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -13257,7 +13263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 5
+  m_text: Can I update my name, email, or phone number?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -15147,13 +15153,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'How do I earn points? Every visit, every drink, every moment that matters.
-    The
-
-    night keeps track. You automatically earn points when you check in at
-    partner
-
-    venues, make purchases, or join YOYO events.'
+  m_text: "Make sure the code is typed exactly as received.If it still doesn\u2019t
+    unlock access, contact us at\nyoyoclub.support@gmail.com"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -15379,7 +15380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -97.21074}
+  m_AnchoredPosition: {x: 138.66092, y: -105.43625}
   m_SizeDelta: {x: 249.32184, y: 21.774498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438550429
@@ -16311,8 +16312,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Can I invite friends? Of course in the future. Soon you\u2019ll be able
-    to share private\r\ninvites and earn bonuses when your friends join the circle."
+  m_text: "Select a partner venue, choose your date and time, and we\u2019ll confirm
+    your booking via WhatsApp.\r\nDoors open fast \u2014 and availability is limited.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -18760,9 +18761,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Who\u2019s behind YOYO? The kind of people who prefer staying in the shadows.
-    A\r\ncollective of creators, technologists, and nightlife lovers building a smarter,
-    more\r\nconnected bar scene in Mexico."
+  m_text: "Check your spam or promotions folder.\r\nIf it\u2019s not there, tap Resend,
+    or email support@yoyoclub.tech\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -19095,7 +19095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -154.75975}
+  m_AnchoredPosition: {x: 138.66092, y: -171.21074}
   m_SizeDelta: {x: 249.32184, y: 21.774498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554374216
@@ -19241,7 +19241,7 @@ GameObject:
   - component: {fileID: 556013871}
   - component: {fileID: 556013870}
   m_Layer: 5
-  m_Name: Delete
+  m_Name: Cancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20494,8 +20494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -0.27929688}
-  m_SizeDelta: {x: 247.15997, y: 0.5586}
+  m_AnchoredPosition: {x: 138.66092, y: -0.27929688}
+  m_SizeDelta: {x: 247.32184, y: 0.5586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &597275477
 GameObject:
@@ -22881,8 +22881,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -194.26323}
-  m_SizeDelta: {x: 247.15997, y: 14.7769}
+  m_AnchoredPosition: {x: 138.66092, y: -194.26323}
+  m_SizeDelta: {x: 247.32184, y: 14.7769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671316904
 MonoBehaviour:
@@ -23103,7 +23103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reap what you drink
+  m_text: Enter the Hidden Loop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -23797,8 +23797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -151.02963}
-  m_SizeDelta: {x: 247.15997, y: 14.7769}
+  m_AnchoredPosition: {x: 138.66092, y: -151.02963}
+  m_SizeDelta: {x: 247.32184, y: 14.7769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698563604
 MonoBehaviour:
@@ -24966,8 +24966,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -370.09967}
-  m_SizeDelta: {x: 247.15997, y: 89.825}
+  m_AnchoredPosition: {x: 138.66092, y: -370.09967}
+  m_SizeDelta: {x: 247.32184, y: 89.825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &739415612
 GameObject:
@@ -25649,8 +25649,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -224.61299}
-  m_SizeDelta: {x: 247.15997, y: 25.9226}
+  m_AnchoredPosition: {x: 138.66092, y: -224.61299}
+  m_SizeDelta: {x: 247.32184, y: 25.9226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &761915372
 GameObject:
@@ -28570,7 +28570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -68.43625}
+  m_AnchoredPosition: {x: 138.66092, y: -76.66174}
   m_SizeDelta: {x: 249.32184, y: 21.774498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829680439
@@ -30016,6 +30016,7 @@ MonoBehaviour:
   costRateContainer: {fileID: 647395889}
   paymentOptionsContainer: {fileID: 1646481203}
   dressCodeContainer: {fileID: 1585207525}
+  spacerDress: {fileID: 1228468642}
   socialMediaContainer: {fileID: 2127262851}
   timeTextPrefab: {fileID: 2391052684952888051, guid: cf469a62592aff241813bc37845286f1, type: 3}
   timeIcon: {fileID: 755002413}
@@ -30907,8 +30908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -10.5586}
-  m_SizeDelta: {x: 247.15997, y: 0.5}
+  m_AnchoredPosition: {x: 138.66092, y: -10.5586}
+  m_SizeDelta: {x: 247.32184, y: 0.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &911291687
 MonoBehaviour:
@@ -31456,8 +31457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -263.41943}
-  m_SizeDelta: {x: 247.15997, y: 14.7769}
+  m_AnchoredPosition: {x: 138.66092, y: -263.41943}
+  m_SizeDelta: {x: 247.32184, y: 14.7769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926790221
 MonoBehaviour:
@@ -32481,7 +32482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reap what you drink
+  m_text: Enter the Hidden Loop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -34019,7 +34020,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 124.66092, y: 0}
-  m_SizeDelta: {x: 249.32184, y: 21.7745}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1023657830
 MonoBehaviour:
@@ -36806,10 +36807,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Can I lose my points? Only if you forget to play. Visiting partner venues
-    or
-
-    engaging with the app at least once every few months.'
+  m_text: "Invitation codes are granted based on your activity and level.\r\nIf you
+    receive one, we\u2019ll send it to you directly via WhatsApp\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -37543,10 +37542,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "What is YOYO, really? Let\u2019s just say it\u2019s where your nights
-    start paying back.\r\nYOYO is a nightlife rewards app that connects you with
-    curated bars, events, and\r\nexclusive experiences across Mexico City. Every
-    visit earns you perks."
+  m_text: YoYo is invite-only. You can enter the hidden loop only with a personal
+    invitation code shared by a member or a founder.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -38633,7 +38630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 4
+  m_text: How do I redeem rewards?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -39272,8 +39269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -316.73047}
-  m_SizeDelta: {x: 247.15997, y: -1.5433}
+  m_AnchoredPosition: {x: 138.66092, y: -316.73047}
+  m_SizeDelta: {x: 247.32184, y: -1.5433}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1149810300
 CanvasRenderer:
@@ -43163,8 +43160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -229.08125}
-  m_SizeDelta: {x: 277.15997, y: 30.5723}
+  m_AnchoredPosition: {x: 138.66092, y: -229.08125}
+  m_SizeDelta: {x: 277.32184, y: 30.5723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226090860
 MonoBehaviour:
@@ -44054,7 +44051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49371f940bb462549a1ae88150296abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextToShow: The points you've earned since day one
+  TextToShow: Your personalized preferences based on what you enjoy across venues,
+    vibes, and categories.
   textLocation: {fileID: 1827216313}
   textBubblePrefab: {fileID: 5465242548949466113, guid: e603d999dff125e438f6ccb75bb5459b, type: 3}
   textBubbleContainer: {fileID: 1166510262}
@@ -44327,7 +44325,7 @@ GameObject:
   - component: {fileID: 1262432803}
   - component: {fileID: 1262432802}
   m_Layer: 5
-  m_Name: Edit
+  m_Name: LogOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44400,6 +44398,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ConfigViewModel, Assembly-CSharp
         m_MethodName: OnClickLogOut
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 212022814}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -44796,7 +44806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reap what you drink
+  m_text: Enter the Hidden Loop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -46386,7 +46396,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 280.74503}
+  m_SizeDelta: {x: 0, y: 313.647}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1314650349
 MonoBehaviour:
@@ -48363,8 +48373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -468.01215}
-  m_SizeDelta: {x: 247.15997, y: 86}
+  m_AnchoredPosition: {x: 138.66092, y: -468.01215}
+  m_SizeDelta: {x: 247.32184, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1377571702
 GameObject:
@@ -48812,8 +48822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -96.156204}
-  m_SizeDelta: {x: 247.15997, y: 16}
+  m_AnchoredPosition: {x: 138.66092, y: -96.156204}
+  m_SizeDelta: {x: 247.32184, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384853313
 MonoBehaviour:
@@ -49182,8 +49192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -19.830502}
-  m_SizeDelta: {x: 247.15997, y: -2.4562}
+  m_AnchoredPosition: {x: 138.66092, y: -19.830502}
+  m_SizeDelta: {x: 247.32184, y: -2.4562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1407878432
 GameObject:
@@ -50921,7 +50931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 10
+  m_text: How can I invite someone to join YoYo?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -51860,7 +51870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40.82006, y: -12.5271}
+  m_AnchoredPosition: {x: 40.82005, y: -12.5271}
   m_SizeDelta: {x: 57.6401, y: 25.0542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460449610
@@ -53979,7 +53989,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 124.66092, y: 0}
-  m_SizeDelta: {x: 249.32184, y: 21.7745}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1532943334
 MonoBehaviour:
@@ -54303,7 +54313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reap What You Drink
+  m_text: Enter the Hidden Loop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -54417,7 +54427,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 0}
+  m_SizeDelta: {x: 239.2011, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1540475988
 MonoBehaviour:
@@ -54439,7 +54449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 2
+  m_text: "My invitation code isn\u2019t working. What should I do?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -54930,7 +54940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 7
+  m_text: How do I make a reservation?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -55972,7 +55982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 9
+  m_text: Why do I need to send my receipt through WhatsApp to earn credits?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -56863,8 +56873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -293.76917}
-  m_SizeDelta: {x: 247.15997, y: 25.9226}
+  m_AnchoredPosition: {x: 138.66092, y: -293.76917}
+  m_SizeDelta: {x: 247.32184, y: 25.9226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1601184190
 GameObject:
@@ -56923,7 +56933,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: How do I join YoYo?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -57276,8 +57286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -125.985245}
-  m_SizeDelta: {x: 249.32184, y: 21.774498}
+  m_AnchoredPosition: {x: 138.66092, y: -138.32349}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610192004
 MonoBehaviour:
@@ -57960,7 +57970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -183.53426}
+  m_AnchoredPosition: {x: 138.66092, y: -199.98524}
   m_SizeDelta: {x: 249.32184, y: 21.774498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622594684
@@ -58817,8 +58827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44.28734, y: -12.5271}
-  m_SizeDelta: {x: 64.5747, y: 25.0542}
+  m_AnchoredPosition: {x: 62.520905, y: -12.5271}
+  m_SizeDelta: {x: 101.0418, y: 25.0542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630626315
 MonoBehaviour:
@@ -58840,7 +58850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Points
+  m_text: Total YoYo Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -61101,7 +61111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44.559433, y: -12.5271}
+  m_AnchoredPosition: {x: 44.55945, y: -12.5271}
   m_SizeDelta: {x: 65.1189, y: 25.0542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701520135
@@ -61473,13 +61483,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Where can I use YOYO? Only in places that know how to keep a secret. You
-    can
-
-    use YOYO in selected bars, lounges, and trendy venues listed inside
-    the app. The
-
-    network keeps expanding.'
+  m_text: Yes. Email, yoyoclub.support@gmail.com and our team will securely update
+    your details.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -62953,8 +62958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -101.89755}
-  m_SizeDelta: {x: 277.15997, y: 203.7951}
+  m_AnchoredPosition: {x: 138.66092, y: -101.89755}
+  m_SizeDelta: {x: 277.32184, y: 203.7951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714375991
 MonoBehaviour:
@@ -63943,8 +63948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -247.57428}
-  m_SizeDelta: {x: 247.15997, y: -1.5433}
+  m_AnchoredPosition: {x: 138.66092, y: -247.57428}
+  m_SizeDelta: {x: 247.32184, y: -1.5433}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1739887610
 CanvasRenderer:
@@ -65312,8 +65317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -135.49405}
-  m_SizeDelta: {x: 247.15997, y: -3.7057}
+  m_AnchoredPosition: {x: 138.66092, y: -135.49405}
+  m_SizeDelta: {x: 247.32184, y: -3.7057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1790991131
 GameObject:
@@ -67338,8 +67343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -126.8469}
-  m_SizeDelta: {x: 247.15997, y: 0.5}
+  m_AnchoredPosition: {x: 138.66092, y: -126.8469}
+  m_SizeDelta: {x: 247.32184, y: 0.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1865052047
 MonoBehaviour:
@@ -67942,8 +67947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -35.990852}
-  m_SizeDelta: {x: 247.15997, y: 14.7769}
+  m_AnchoredPosition: {x: 138.66092, y: -35.990852}
+  m_SizeDelta: {x: 247.32184, y: 14.7769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879594632
 MonoBehaviour:
@@ -68083,8 +68088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -241.08327}
-  m_SizeDelta: {x: 249.32184, y: 21.774498}
+  m_AnchoredPosition: {x: 138.66092, y: -261.647}
+  m_SizeDelta: {x: 249.32184, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885796906
 MonoBehaviour:
@@ -68730,7 +68735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 3
+  m_text: How do I earn YoYo Credits?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -68924,7 +68929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 91.5747, y: -12.5271}
+  m_AnchoredPosition: {x: 128.04181, y: -12.5271}
   m_SizeDelta: {x: 10, y: 25.0542}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1903226918
@@ -69033,7 +69038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49371f940bb462549a1ae88150296abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextToShow: The points you've earned since day one
+  TextToShow: "Your current balance of YoYo Credits \u2014 earn them, redeem them,
+    and unlock curated access."
   textLocation: {fileID: 522249172}
   textBubblePrefab: {fileID: 5465242548949466113, guid: e603d999dff125e438f6ccb75bb5459b, type: 3}
   textBubbleContainer: {fileID: 1166510262}
@@ -69095,7 +69101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 8
+  m_text: "I didn\u2019t receive my verification email"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -69387,7 +69393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 6
+  m_text: What happens if I delete my account?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
   m_sharedMaterial: {fileID: 6709486913782174596, guid: 00eb9488025ff9f4c9c51e1e3b396795, type: 2}
@@ -70377,8 +70383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -178.41809}
-  m_SizeDelta: {x: 247.15997, y: -1.5433}
+  m_AnchoredPosition: {x: 138.66092, y: -178.41809}
+  m_SizeDelta: {x: 247.32184, y: -1.5433}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1928735497
 CanvasRenderer:
@@ -71585,8 +71591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.66092, y: 0}
-  m_SizeDelta: {x: 249.32184, y: 21.7745}
+  m_AnchoredPosition: {x: 124.6609, y: 0}
+  m_SizeDelta: {x: 249.3218, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1976942176
 MonoBehaviour:
@@ -71717,8 +71723,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -168.41809}
-  m_SizeDelta: {x: 247.15997, y: 0}
+  m_AnchoredPosition: {x: 138.66092, y: -168.41809}
+  m_SizeDelta: {x: 247.32184, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977895583
 MonoBehaviour:
@@ -74408,7 +74414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.66092, y: -212.30876}
+  m_AnchoredPosition: {x: 138.66092, y: -228.75975}
   m_SizeDelta: {x: 249.32184, y: 21.774498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051311088
@@ -74706,8 +74712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.57999, y: -53.379303}
-  m_SizeDelta: {x: 247.15997, y: 0}
+  m_AnchoredPosition: {x: 138.66092, y: -53.379303}
+  m_SizeDelta: {x: 247.32184, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053972201
 MonoBehaviour:

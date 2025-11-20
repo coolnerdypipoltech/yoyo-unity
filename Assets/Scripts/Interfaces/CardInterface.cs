@@ -103,8 +103,8 @@ public class CardInterface : MonoBehaviour
         {
             return;
         }
-        
-        ApiManager.instance.GenerateWhatsAppMessage("Hello, I would like to add points to my account." + " This is my Id: " + ApiManager.instance.GetUserId());
+
+        ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I’d like to add points to my account. " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
     }
 
     public void onDoubleTap()

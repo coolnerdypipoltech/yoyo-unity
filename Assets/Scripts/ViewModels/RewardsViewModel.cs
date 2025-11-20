@@ -33,7 +33,7 @@ public class RewardsViewModel : ViewModel
         User user = ApiManager.instance.GetUser();
         if (user != null)
         {
-            pointsText.text = $"Available Points: {user.related.points}";
+            pointsText.text = $"Available YoYo Credits: {user.related.points}";
         }
         StartCoroutine(WaitAFrame());
     }

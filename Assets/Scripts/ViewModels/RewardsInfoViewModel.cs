@@ -65,11 +65,11 @@ public class RewardsInfoViewModel : ViewModel
 
         if (isFromRewards)
         {
-            ApiManager.instance.GenerateWhatsAppMessage("I would like to redeem this reward: " + titleText.text + " This is my userID: " + ApiManager.instance.GetUserId());
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I’d like to redeem the following reward: " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
         else
         {
-            ApiManager.instance.GenerateWhatsAppMessage("I would like to find this partner: " + titleText.text + " This is my userID: " + ApiManager.instance.GetUserId());
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I would like to find this partner: " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
 
     }
@@ -83,7 +83,7 @@ public class RewardsInfoViewModel : ViewModel
         descriptionText.text = _reward.description;
         validityText.text = FormatDateRange(_reward.starts_on, _reward.ends_on);
         conditionsText.text = _reward.conditions;
-        costText.text = _reward.cost.ToString() + " points";
+        costText.text = _reward.cost.ToString() + " YoYo Credits";
         availableQuantityText.text = _reward.stock.ToString();
         link = _reward.url;
         isFromRewards = _isFromRewards;

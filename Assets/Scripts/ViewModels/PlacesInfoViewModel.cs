@@ -11,7 +11,7 @@ public class PlacesInfoViewModel : ViewModel
     public TextMeshProUGUI titleText, descriptionText, musicLineUpText, locationText;
 
     public GameObject musicLineUpContainer, locationContainer, timeContainer, TagsContainer, tagParent, tagItemPrefab, FacebookButton, InstagramButton, WebsiteButton;
-    public GameObject costRateContainer, paymentOptionsContainer, dressCodeContainer, socialMediaContainer, timeTextPrefab, timeIcon, timeTextContainer;
+    public GameObject costRateContainer, paymentOptionsContainer, dressCodeContainer, spacerDress, socialMediaContainer, timeTextPrefab, timeIcon, timeTextContainer;
     public RectTransform contentRebuild;
     public ToggleGroup paginationToggleGroup;
     public GameObject ImageGalleryContainer, ImageGalleryItemPrefab, scrollSnapContainer, togglePrefab, paddingRight, paddingLeft;
@@ -63,6 +63,7 @@ public class PlacesInfoViewModel : ViewModel
         {
             item.SetActive(false);
         }
+        spacerDress.SetActive(true);
         dressCodeContainer.SetActive(true);
         tagParent.SetActive(true);
         paymentOptionsContainer.SetActive(true);
@@ -97,9 +98,7 @@ public class PlacesInfoViewModel : ViewModel
     {
         if (isFromPlace)
         {
-            
-            string whatsappMessage = "Hello, I would like to make a reservation. In " + titleText.text + "." + " This is my Id: " + ApiManager.instance.GetUserId();
-            ApiManager.instance.GenerateWhatsAppMessage(whatsappMessage);
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I’d like to request a reservation at " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
         else
         {
@@ -164,7 +163,6 @@ public class PlacesInfoViewModel : ViewModel
 
         SimpleScrollSnap scrollSnap = scrollSnapContainer.AddComponent<SimpleScrollSnap>();
         scrollSnap.AutomaticLayoutSpacing = 0f;
-        Debug.Log(scrollSnap.AutomaticLayoutMargins);
         if(_place.gallery != null && _place.gallery.Count > 1)
         {
             scrollSnap.Pagination = paginationToggleGroup;
@@ -255,6 +253,7 @@ public class PlacesInfoViewModel : ViewModel
         if (_place.dresscode == null || _place.dresscode == "")
         {
             dressCodeContainer.SetActive(false);
+            spacerDress.SetActive(false);
         }
         else
         {

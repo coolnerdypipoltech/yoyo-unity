@@ -98,7 +98,7 @@ public class PlacesInfoViewModel : ViewModel
     {
         if (isFromPlace)
         {
-            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I’d like to request a reservation at " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0D%0A" + "I’d like to request a reservation at " + titleText.text + ". " + "%0D%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
         else
         {

@@ -65,11 +65,11 @@ public class RewardsInfoViewModel : ViewModel
 
         if (isFromRewards)
         {
-            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I’d like to redeem the following reward: " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0D%0A" + "I’d like to redeem the following reward: " + titleText.text + ". " + "%0D%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
         else
         {
-            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0A" + "I would like to find this partner: " + titleText.text + ". " + "%0A" + "My ID is " + ApiManager.instance.GetUserId());
+            ApiManager.instance.GenerateWhatsAppMessage("Hello YoYo " + "%0D%0A" + "I would like to find this partner: " + titleText.text + ". " + "%0D%0A" + "My ID is " + ApiManager.instance.GetUserId());
         }
 
     }

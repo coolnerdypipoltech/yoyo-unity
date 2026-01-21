@@ -33387,15 +33387,15 @@ RectTransform:
   m_GameObject: {fileID: 983584084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 416002887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 216, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &983584086
 VideoPlayer:
@@ -33414,7 +33414,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
-  m_AspectRatio: 5
+  m_AspectRatio: 0
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
@@ -33483,7 +33483,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 983584086}
   rawImage: {fileID: 983584088}
   clips:
-  - {fileID: 32900000, guid: 7a429b5718c2ef4478a13c0f5e6a51bb, type: 3}
+  - {fileID: 32900000, guid: 4c0746c79c4214c4daf87a20aee2d7f5, type: 3}
   - {fileID: 32900000, guid: 1eeeecfeacef10f4eb022b8513cc8d47, type: 3}
   - {fileID: 32900000, guid: 6ff45acc783866040b379567fba558df, type: 3}
   - {fileID: 32900000, guid: ae1f5a55a5004be4aa0b4e2daafa0b12, type: 3}
